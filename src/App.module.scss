@@ -1,0 +1,11 @@
+:root {
+  --main-padding: 5em;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-block: var(--main-padding);
+}

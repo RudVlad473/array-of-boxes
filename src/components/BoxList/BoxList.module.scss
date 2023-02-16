@@ -1,0 +1,38 @@
+:root {
+  --box-list-gap: 2em;
+
+  --min-box-size: 3em;
+
+  --max-box-size: 7em;
+}
+
+.box-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    var(--box-list-gap) minmax(var(--min-box-size), var(--max-box-size))
+  );
+  row-gap: var(--box-list-gap);
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.box-pad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: var(--box-list-gap);
+  min-height: 100%;
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}

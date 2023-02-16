@@ -1,0 +1,44 @@
+:root {
+  --box-padding: 2em;
+  --box-border-radius: 1.75em;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  //max-width: fit-content;
+
+  padding: var(--box-padding);
+
+  border: 3px solid black;
+  border-radius: var(--box-border-radius);
+
+  aspect-ratio: 1;
+
+  &--editable {
+    border-style: dotted;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  max-height: 2em;
+
+  font-weight: bold;
+
+  width: 100%;
+  //min-height: 100%;
+
+  border-bottom: 2px solid transparent;
+
+  &:focus {
+    outline: none;
+
+    border-bottom: 2px solid black;
+  }
+}
