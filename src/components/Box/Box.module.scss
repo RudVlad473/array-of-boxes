@@ -9,13 +9,14 @@
   align-items: center;
 
   //max-width: fit-content;
+  min-height: 100%;
 
   padding: var(--box-padding);
 
   border: 3px solid black;
   border-radius: var(--box-border-radius);
 
-  aspect-ratio: 1;
+  //aspect-ratio: 1;
 
   &--editable {
     border-style: dotted;
@@ -23,6 +24,8 @@
 }
 
 .content {
+  --underline-width: 2px;
+
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -34,7 +37,9 @@
   width: 100%;
   //min-height: 100%;
 
-  border-bottom: 2px solid transparent;
+  border-bottom: var(--underline-width) solid transparent;
+
+  margin-top: calc(var(--underline-width));
 
   &:focus {
     outline: none;

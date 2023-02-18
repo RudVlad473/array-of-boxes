@@ -28,7 +28,7 @@ const BoxList: FC<BoxListProps> = ({ boxes, dispatchBoxes }) => {
 
         return (
           <>
-            <li key={newId}>
+            <li key={newId} className={styles["box-container"]}>
               <Box {...box} dispatchBoxes={dispatchBoxes} />
             </li>
             <li

@@ -1,17 +1,16 @@
 :root {
   --box-list-gap: 2em;
 
-  --min-box-size: 3em;
-
-  --max-box-size: 7em;
+  --max-box-size: 8em;
 }
 
 .box-list {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    var(--box-list-gap) minmax(var(--min-box-size), var(--max-box-size))
+    var(--box-list-gap) var(--max-box-size)
   );
+  grid-auto-rows: var(--max-box-size);
   row-gap: var(--box-list-gap);
 
   align-items: center;
@@ -35,4 +34,9 @@
   &:hover {
     opacity: 1;
   }
+}
+
+.box-container {
+  min-height: 100%;
+  height: 100%;
 }
